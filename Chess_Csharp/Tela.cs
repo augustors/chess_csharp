@@ -1,11 +1,42 @@
 ﻿using tabuleiro;
 using System;
 using xadrez;
+using System.Collections.Generic;
 
 namespace Chess_Csharp
 {
     internal class Tela
     {
+        public static void ImprimirPartida(PartidaXadrez partida)
+        {
+            ImprimirTabuleiro(partida.tab);
+            Console.WriteLine();
+            ImprimirPecasCapturadas(partida);
+            Console.WriteLine();
+            Console.WriteLine("Turno: " + partida.Turno);
+            Console.WriteLine("Aguardando Jogada: " + partida.JogadorAtual);
+        }
+
+        public static void ImprimirPecasCapturadas(PartidaXadrez partida)
+        {
+            Console.WriteLine("Peças Capturadas:");
+            Console.Write("Brancas: ");
+            ImprimirConjunto(partida.PecasCapturadas(Cor.Branca));
+            Console.WriteLine();
+            Console.Write("Pretas: ");
+            ImprimirConjunto(partida.PecasCapturadas(Cor.Preta));
+        }
+
+        public static void ImprimirConjunto(HashSet<Peca> conjunto)
+        {
+            Console.Write("[");
+            foreach(Peca x in conjunto)
+            {
+                Console.Write(x + " ");
+            }
+            Console.Write("]");
+        }
+
         public static void ImprimirTabuleiro(Tabuleiro tab)
         {
             for (int i = 0; i < tab.Linhas; i++)

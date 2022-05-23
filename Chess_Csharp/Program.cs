@@ -15,11 +15,7 @@ namespace Chess_Csharp
                 {
                     try{
                         Console.Clear();
-                        Tela.ImprimirTabuleiro(partida.tab);
-
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: " + partida.Turno);
-                        Console.WriteLine("Aguardando Jogada: " + partida.JogadorAtual);
+                        Tela.ImprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
