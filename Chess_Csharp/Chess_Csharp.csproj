@@ -51,6 +51,9 @@
     <Compile Include="tabuleiro\Tabuleiro.cs" />
     <Compile Include="tabuleiro\TabuleiroException.cs" />
     <Compile Include="Tela.cs" />
+    <Compile Include="xadrez\Bispo.cs" />
+    <Compile Include="xadrez\Cavalo.cs" />
+    <Compile Include="xadrez\Dama.cs" />
     <Compile Include="xadrez\PartidaXadrez.cs" />
     <Compile Include="xadrez\Peao.cs" />
     <Compile Include="xadrez\PosicaoXadrez.cs" />
